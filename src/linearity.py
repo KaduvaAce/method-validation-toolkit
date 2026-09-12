@@ -26,3 +26,8 @@ print(f"Intercept:  {intercept:.2f}")
 print(f"R-squared:  {r_squared:.5f}")
 print(f"Sigma:      {sigma:.2f}")
 print(f"Residuals:  {np.round(residuals, 1)}")
+lod = 3.3 * sigma / slope
+loq = 10 * sigma / slope
+
+print(f"LOD:        {lod:.3f} ug/mL")
+print(f"LOQ:        {loq:.3f} ug/mL")
