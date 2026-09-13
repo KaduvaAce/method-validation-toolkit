@@ -1,10 +1,10 @@
 import pandas as pd
 
-PAPER = "data/papers/mesalamine_2025_accuracy.csv"
+PAPER = "data/papers/caffeine_2019_accuracy.csv"
 TOLERANCE = 0.02  # percentage points; set by the paper's 2-dp reporting precision
 
 data = pd.read_csv(PAPER)
-data["my_recovery_pct"] = (data["found_mg"] / data["added_mg"]) * 100
+data["my_recovery_pct"] = (data["found_ugml"] / data["added_ugml"]) * 100
 data["difference"] = data["my_recovery_pct"] - data["paper_recovery_pct"]
 
 print(f"Source: {PAPER}\n")
