@@ -59,5 +59,11 @@ for key, published in PUBLISHED.items():
     print(f"{key:<11} {published:>10.4f}  {mine[key]:>10.4f}  "
           f"{diff:>+11.4f}  {ratio:>6.2f}")
 
-verdict = "PASS" if r_squared >= cfg["linearity"]["r_squared_min"] else "FAIL"
-print(f"\nLinearity: {verdict} (R2 limit {cfg['linearity']['r_squared_min']})")
+r = np.sqrt(r_squared)
+r2_limit = cfg["linearity"]["r_squared_min"]
+verdict = "PASS" if r_squared >= r2_limit else "FAIL"
+
+print(f"\nR2 = {r_squared:.5f}   r = {r:.5f}")
+print(f"Linearity: {verdict} against R2 limit {r2_limit}")
+print(f"Note: r exceeds {r2_limit} even where R2 does not; "
+      f"papers reporting 'correlation coefficient' may mean either.")
