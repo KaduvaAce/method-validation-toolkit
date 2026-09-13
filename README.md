@@ -66,7 +66,7 @@ tolerance derived from the paper's own reporting precision.
 
 Full extraction notes, published values and per-paper findings are in
 
-`data/papers/\*\_SOURCE.md`, each with its DOI and licence.
+`data/papers/*_SOURCE.md`, each with its DOI and licence.
 
 
 
