@@ -1,0 +1,22 @@
+# Acceptance limits and calculation options.
+# Edit this file to change the standard applied - never edit the code.
+
+linearity:
+  r_squared_min: 0.999
+
+sensitivity:
+  # residual     = residual standard deviation of the regression (default)
+  # intercept_se = standard error of the y-intercept
+  sigma_method: intercept_se
+  lod_factor: 3.3
+  loq_factor: 10.0
+
+precision:
+  rsd_max_pct: 2.0
+
+accuracy:
+  recovery_min_pct: 98.0
+  recovery_max_pct: 102.0
+
+verification:
+  tolerance_pct_points: 0.02
