@@ -7,7 +7,7 @@ linearity:
 sensitivity:
   # residual     = residual standard deviation of the regression (default)
   # intercept_se = standard error of the y-intercept
-  sigma_method: intercept_se
+  sigma_method: residual
   lod_factor: 3.3
   loq_factor: 10.0
 
